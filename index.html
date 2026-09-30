@@ -1,1 +1,68 @@
- 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>حلو الملك | Halawet El Malek</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== HTML: الهيدر ========== -->
+<header>
+  <div class="top">
+    <div class="logo" id="logo"><svg viewBox="0 0 64 40" width="46" height="29" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#D8B95A"/><stop offset="1" stop-color="#8F7229"/></linearGradient></defs><path d="M6 34 L9 12 L22 23 L32 6 L42 23 L55 12 L58 34Z" fill="url(#lg)"/><rect x="6" y="35" width="52" height="4" rx="2" fill="url(#lg)"/><circle cx="9" cy="10" r="3.5" fill="#D8B95A"/><circle cx="32" cy="4.5" r="3.5" fill="#D8B95A"/><circle cx="55" cy="10" r="3.5" fill="#D8B95A"/></svg>حلو الملك<small>HALAWET EL MALEK</small></div>
+    <label class="search"><span>🔍</span><input id="q" type="search" data-ph="search" autocomplete="off"></label>
+    <div class="tools">
+      <button id="btnAccount">👤 <span data-t="login"></span></button>
+      <button id="btnRegister" data-t="register"></button>
+      <span class="sep"></span>
+      <button id="btnCart">🧺 <span><b id="cartCount">0</b> <span data-t="items"></span></span></button>
+      <span class="sep"></span>
+      <button id="btnLoc">📍 <span id="locName"></span> <u style="color:var(--gold)" data-t="change"></u></button>
+      <button id="btnLang">🇪🇬 <span id="langName"></span></button>
+    </div>
+  </div>
+  <nav id="nav"></nav>
+</header>
+
+<!-- ========== HTML: المحتوى ========== -->
+<section class="hero" id="hero"></section>
+<main id="main"></main>
+<footer><span data-t="footer"></span></footer>
+<button id="up" aria-label="top">⌃</button>
+
+<!-- ========== HTML: النوافذ ========== -->
+<div class="veil" id="veil"></div>
+
+<aside class="drawer" id="cart">
+  <button class="close" data-close>×</button>
+  <h4 style="color:var(--gold-d);font-size:20px" data-t="cart"></h4>
+  <div class="items" id="cartItems"></div>
+  <div class="total"><span data-t="total"></span><span id="cartTotal"></span></div>
+  <button class="add" id="checkout" data-t="checkout"></button>
+</aside>
+
+<div class="modal" id="authModal">
+  <button class="close" data-close>×</button>
+  <div class="tabs"><button data-tab="login" class="on"></button><button data-tab="register"></button></div>
+  <div id="nameWrap" style="display:none"><input id="uName" data-ph="name"></div>
+  <input id="uEmail" type="email" data-ph="email">
+  <input id="uPass" type="password" data-ph="password">
+  <button class="add" id="authGo" style="width:100%"></button>
+</div>
+
+<div class="modal" id="locModal">
+  <button class="close" data-close>×</button>
+  <h4 data-t="chooseArea"></h4>
+  <select id="locSel"></select>
+  <button class="add" id="locGo" style="width:100%" data-t="save"></button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html> 
